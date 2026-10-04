@@ -1,0 +1,12 @@
+{# What a member is as a lawyer: bar, oath, certified specialisations (the official list's words), dominant fields. Included with {attorney: lawyer_attorney(member)}. #}
+{% if attorney %}
+<dl class="la-facts">
+    {% set bar = attorney.bar ?: lawyer_record().bar %}
+    {% if bar %}<div><dt>{{ 'attorney.bar'|trans({}, 'lawyer') }}</dt><dd>{{ bar }}</dd></div>{% endif %}
+    {% if attorney.swornIn %}<div><dt>{{ 'attorney.sworn_in'|trans({}, 'lawyer') }}</dt><dd>{{ attorney.swornIn }}</dd></div>{% endif %}
+    {% if attorney.specialisations %}
+    <div><dt>{{ 'attorney.specialisations'|trans({count: attorney.specialisations|length}, 'lawyer') }}</dt><dd>{% for specialisation in attorney.specialisations %}{{ specialisation.label }}{{ not loop.last ? ' · ' }}{% endfor %}{% if attorney.qualification %}<br><span class="of-meta">{{ 'attorney.qualification'|trans({}, 'lawyer') }} : {{ attorney.qualification }}</span>{% endif %}</dd></div>
+    {% endif %}
+    {% if attorney.dominantFields %}<div><dt>{{ 'attorney.dominant_fields'|trans({}, 'lawyer') }}</dt><dd>{{ attorney.dominantFields|slice(0, 3)|join(' · ') }}</dd></div>{% endif %}
+</dl>
+{% endif %}

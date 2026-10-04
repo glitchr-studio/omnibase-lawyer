@@ -1,0 +1,43 @@
+{
+    "name": "omnibase/lawyer",
+    "type": "symfony-bundle",
+    "description": "The lawyers' regime on omnibase/office: a law firm's site within article 10 of the RIN - the domain name checked (10.5), specialisations from the certified list only and three dominant fields at most (10.2), wording checked against comparison, the fees and the mandatory fee agreement (11.1, 11.2), the consumer mediator of the profession, the memo of what is declared to the Ordre; fields of practice, the client's space on the encrypted vault, professional secrecy in who reads a document; the hook for paying fees online.",
+    "keywords": ["symfony", "omnibase", "avocat", "lawyer", "cabinet d'avocat", "RIN", "compliance", "déontologie"],
+    "homepage": "https://github.com/glitchr-studio/omnibase-lawyer",
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Marco Meyer",
+            "email": "marco.meyer@glitchr.io"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "doctrine/orm": "^2.15|^3.0",
+        "glitchr/omnibase": "3.0.*-dev",
+        "omnibase/office": "dev-main",
+        "symfony/config": "^6.4|^7.0|^8.0",
+        "symfony/dependency-injection": "^6.4|^7.0|^8.0",
+        "symfony/http-kernel": "^6.4|^7.0|^8.0",
+        "symfony/security-bundle": "^6.4|^7.0|^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5|^11.0|^12.0"
+    },
+    "suggest": {
+        "omnibase/admin": "The back office: lawyers, fields of practice, the settings, the memo for the Ordre, the compliance widget",
+        "omnibase/marketplace": "Paying a fee note online (fees only, never clients' funds): the fees page links to it when it is installed and lawyer.payment.enabled is set"
+    },
+    "autoload": {
+        "psr-4": {
+            "Base\\Lawyer\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Base\\Lawyer\\Tests\\": "./tests"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

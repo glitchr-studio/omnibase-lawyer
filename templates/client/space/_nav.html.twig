@@ -1,0 +1,9 @@
+{# The client space's menu, on each of its pages (the office's too: office.templates.space_nav). #}
+{% set route = app.request.attributes.get('_route') %}
+<nav class="la-space-nav" aria-label="{{ 'space.title'|trans({}, 'lawyer') }}">
+    <ul>
+        <li><a href="{{ path('lawyer_space') }}"{{ route == 'lawyer_space' ? ' aria-current="page"' }}>{{ 'space.nav.home'|trans({}, 'lawyer') }}</a></li>
+        <li><a href="{{ path('office_space_appointments') }}"{{ route == 'office_space_appointments' ? ' aria-current="page"' }}>{{ 'space.nav.appointments'|trans({}, 'lawyer') }}</a></li>
+        <li><a href="{{ path('office_space_documents') }}"{{ route == 'office_space_documents' ? ' aria-current="page"' }}>{{ 'space.nav.documents'|trans({}, 'lawyer') }}{% set unread_documents = office_unread_documents(app.user) %}{% if unread_documents %} <span class="of-badge">{{ unread_documents }}</span>{% endif %}</a></li>
+    </ul>
+</nav>

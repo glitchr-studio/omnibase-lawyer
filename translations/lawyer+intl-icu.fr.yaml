@@ -1,0 +1,175 @@
+contact:
+    notice: 'Ce formulaire n’est pas confidentiel et ne crée aucune relation entre vous et le cabinet. N’y joignez et n’y décrivez <strong>aucune pièce ni information confidentielle</strong> — une fois votre dossier ouvert, déposez vos documents dans le coffre chiffré de votre espace client.'
+
+areas:
+    title: Domaines d’intervention
+    lead: Les matières dans lesquelles le cabinet conseille et défend.
+    none: Les domaines d’intervention seront présentés ici.
+    matters: Questions traitées
+    team: Qui s’en occupe au cabinet
+    others: Autres domaines
+    ask: Demander un rendez-vous
+    cost: Combien cela coûte-t-il ?
+    cost_text: Les honoraires sont fixés avec vous, par écrit, avant toute intervention.
+    cost_link: Voir les honoraires
+
+attorney:
+    bar: Barreau
+    sworn_in: Prestation de serment
+    specialisations: '{count, plural, one {Mention de spécialisation} other {Mentions de spécialisation}}'
+    qualification: Qualification spécifique
+    dominant_fields: Domaines d’activités dominantes
+
+fees:
+    title: Honoraires
+    lead: Les honoraires de l’avocat sont libres ; ils sont convenus avec vous avant toute intervention, et vous savez à tout moment où ils en sont.
+    agreement: La convention d’honoraires
+    agreement_text: 'Sauf urgence, force majeure ou aide juridictionnelle totale, le cabinet conclut avec vous, par écrit, une convention d’honoraires : elle précise le montant ou le mode de calcul des honoraires pour les diligences prévisibles, ainsi que les frais et débours envisagés. Vous êtes ensuite informé régulièrement de leur évolution.'
+    how: Comment ils sont fixés
+    how_text: Les honoraires tiennent compte, selon les usages, de votre situation, de la difficulté de l’affaire, des frais exposés et des diligences accomplies.
+    terms_missing: Le cabinet n’a pas encore indiqué ici ses modalités d’honoraires.
+    no_quota_litis: 'Un honoraire de résultat peut compléter l’honoraire convenu ; il ne peut jamais constituer à lui seul toute la rémunération : le pacte de quota litis est interdit.'
+    first: Premier rendez-vous
+    legal_aid: Aide juridictionnelle
+    payment: Règlement
+    payment_text: 'Les honoraires se règlent par chèque, par virement ou par carte bancaire, sur présentation d’une note d’honoraires. Avant tout règlement définitif, un compte détaillé vous est remis.'
+    pay_online: Régler une note d’honoraires
+    pay_scope: Le paiement en ligne ne sert qu’au règlement des honoraires du cabinet. Les sommes destinées à un tiers ou à l’exécution d’une décision ne se versent jamais ici.
+    dispute: En cas de désaccord
+    dispute_text: Adressez-vous d’abord au cabinet. Si le différend persiste, les contestations d’honoraires relèvent du bâtonnier ; le client consommateur peut aussi saisir gratuitement le médiateur de la consommation de la profession d’avocat.
+    dispute_link: Médiation
+
+mediation:
+    title: Médiation
+    lead: En cas de différend avec le cabinet, une solution amiable peut être recherchée avec l’aide d’un tiers.
+    first: D’abord, le cabinet
+    first_text: Écrivez au cabinet pour exposer votre réclamation ; il vous répond.
+    then: Ensuite, le médiateur de la consommation de la profession d’avocat
+    then_text: Si la réponse ne vous satisfait pas, ou faute de réponse, le client consommateur peut saisir gratuitement le médiateur de la consommation de la profession d’avocat, institué par le Conseil national des barreaux.
+    coordinates: Coordonnées du médiateur
+    site: Site du médiateur
+    bar: Le bâtonnier
+    bar_text: 'Le cabinet est inscrit au {bar}. Les réclamations relatives aux honoraires peuvent être portées devant son bâtonnier.'
+
+space:
+    title: Espace client
+    hello: Votre espace
+    lead: Vos rendez-vous et vos pièces, à l’abri — les documents sont chiffrés et ne circulent jamais par courriel.
+    next: Rendez-vous
+    documents: Pièces et documents
+    unread: '{count, plural, one {# nouveau} other {# nouveaux}}'
+    all_documents: Tous les documents et dépôt
+    ask: Demander un rendez-vous
+    nav:
+        home: Accueil
+        appointments: Rendez-vous
+        documents: Documents
+
+request:
+    title: Demander un rendez-vous
+    lead: Indiquez l’objet de votre demande ; le cabinet vous rappelle pour convenir d’une date.
+    notice: 'Dites en quelques mots de quoi il s’agit, <strong>sans détail confidentiel ni pièce</strong>, et sans nommer la partie adverse : le cabinet vérifie d’abord qu’il peut vous assister. Vos documents se déposent ensuite dans votre espace client.'
+    type: Objet du rendez-vous
+    choose: Choisir…
+    member: Avec
+    no_preference: Sans préférence
+    name: Nom et prénom
+    email: Courriel
+    phone: Téléphone
+    message: Votre demande, en quelques mots
+    message_help: Facultatif. Conservé chiffré, lu par le cabinet seulement.
+    privacy: 'Vos coordonnées servent à vous recontacter pour fixer ce rendez-vous. Elles sont conservées {months} mois au plus si aucune suite n’est donnée, et ne sont transmises à personne.'
+    submit: Envoyer la demande
+    sent: Votre demande est enregistrée. Le cabinet vous rappelle pour convenir d’une date ; un courriel vous le confirme.
+    none: La demande de rendez-vous en ligne n’est pas ouverte. Appelez le cabinet.
+    unavailable: La demande ne peut pas être enregistrée pour le moment. Appelez le cabinet.
+    how: Comment cela se passe
+    how_1: Vous envoyez votre demande.
+    how_2: Le cabinet vous rappelle et fixe la date avec vous.
+    how_3: Au premier rendez-vous, les honoraires sont convenus par écrit ; votre espace client s’ouvre ensuite.
+    phone_instead: 'Vous préférez téléphoner :'
+
+settings:
+    firm: Avocats — dénomination du cabinet
+    structure: Avocats — structure d’exercice (exercice individuel, SELARL, AARPI…)
+    bar: Avocats — barreau d’inscription
+    network: Avocats — réseau dont le cabinet est membre (facultatif)
+    declared_at: Avocats — site déclaré au conseil de l’Ordre le (AAAA-MM-JJ)
+    fees: Avocats — modalités de détermination des honoraires
+    first_meeting: Avocats — premier rendez-vous (durée, prix)
+    legal_aid: Avocats — aide juridictionnelle (acceptée ou non, dans quelles matières)
+
+compliance:
+    domain: Nom de domaine
+    domain_none: Aucun nom de domaine n’est connu du site — configuration lawyer.domains.
+    domain_generic: '{domains} : le nom de domaine doit comporter le nom de l’avocat ou la dénomination du cabinet ; un nom évoquant de façon générique le titre d’avocat, un domaine du droit ou une activité de l’avocat est interdit (RIN, art. 10.5).'
+    domain_mixed: '{domains} : le nom de domaine comporte bien le nom, mais aussi un domaine du droit ou une activité — à soumettre au conseil de l’Ordre (RIN, art. 10.5).'
+    domain_unnamed: '{domains} : le nom de l’avocat ou la dénomination du cabinet n’y a pas été reconnu (RIN, art. 10.5). Vérifiez la dénomination dans Réglages.'
+    domain_local: '{domains} est une adresse de développement : indiquez le nom de domaine réel (configuration lawyer.domains) pour qu’il soit vérifié (RIN, art. 10.5).'
+    order: Site déclaré au conseil de l’Ordre
+    order_bar_advice: Indiquez dans Réglages le barreau d’inscription.
+    order_advice: 'L’ouverture du site, toute modification substantielle et ses noms de domaine sont à communiquer sans délai au conseil de l’Ordre du {bar} (RIN, art. 10.5). Indiquez la date dans Réglages ; l’aide-mémoire liste ce qu’il faut transmettre.'
+    order_future: La date de déclaration au conseil de l’Ordre est dans le futur.
+    identification: Identification du cabinet
+    identification_advice: 'Il manque : {missing}. Toute communication permet d’identifier l’avocat, de le localiser, de le joindre, de connaître son barreau et sa structure d’exercice (RIN, art. 10.2) — Réglages, et Lieux et accès.'
+    specialisation: Spécialisations et domaines d’activités dominantes
+    specialisation_advice: 'À corriger — {found}. Seul le titulaire d’un certificat de spécialisation emploie les mots « spécialiste », « spécialisé », « spécialité », « spécialisation » ; les domaines d’activités dominantes sont trois au plus (RIN, art. 10.2).'
+    wording: Textes sans comparaison ni dénigrement
+    wording_advice: 'À relire — {found}. Sont prohibées toute mention comparative ou dénigrante et toute référence à des fonctions juridictionnelles (RIN, art. 10.2).'
+    fees: Information sur les honoraires
+    fees_advice: Indiquez dans Réglages comment les honoraires du cabinet sont déterminés — la page Honoraires les publie, avec la convention d’honoraires (RIN, art. 11.1 et 11.2).
+    mediator: Coordonnées du médiateur de la consommation de la profession d’avocat
+    mediator_advice: Le nom et les coordonnées du médiateur ne sont plus configurés (lawyer.mediator) — la page Médiation et les mentions légales les publient.
+    payment: Paiement en ligne — honoraires seulement
+    payment_missing: Le paiement en ligne est activé mais omnibase/marketplace n’est pas installé — le lien n’est pas affiché.
+    payment_route: Le paiement en ligne est activé sans page de paiement (lawyer.payment.route) — le lien n’est pas affiché.
+    payment_scope: 'La page de paiement ne doit recevoir que des honoraires (RIN, art. 11.5) ; les fonds maniés pour un client se déposent à la CARPA (RIN, art. 6.2).'
+
+admin:
+    field:
+        name: Nom
+        position: Ordre
+        summary: En une phrase
+        body: Texte de la page
+        matters: Questions traitées
+        members: Qui s’en occupe
+        active: En ligne
+        member: Membre de l’équipe
+        bar: Barreau
+        sworn_in: Année du serment
+        specialisations: Mentions de spécialisation (certificats obtenus)
+        qualification: Qualification spécifique
+        dominant_fields: Domaines d’activités dominantes
+    help:
+        body: Un paragraphe par bloc, séparés par une ligne vide. Sans comparaison, et sans le mot « spécialité » si personne au cabinet n’est titulaire d’un certificat.
+        matters: Une par ligne.
+        bar: Vide — celui du cabinet.
+        specialisations: Deux au plus, dans la liste officielle. Uniquement les certificats régulièrement obtenus et non invalidés.
+        qualification: Telle qu’elle figure sur le certificat.
+        dominant_fields: Un par ligne, trois au plus, issus d’une pratique effective et habituelle.
+    declaration:
+        title: Aide-mémoire — conseil de l’Ordre
+        lead: Ce que le site dit aujourd’hui et qui se communique au conseil de l’Ordre. À imprimer ou à reprendre dans le courrier ; rien n’est envoyé d’ici.
+        to: Destinataire
+        to_bar: 'Conseil de l’Ordre du {bar}'
+        declared: 'site déclaré le {date}'
+        not_declared: site non déclaré à ce jour
+        print: Imprimer
+        settings: Réglages
+        domains: Noms de domaine
+        domains_rule: 'RIN, art. 10.5 — l’avocat qui ouvre ou modifie substantiellement un site en informe le conseil de l’Ordre sans délai et lui communique les noms de domaine. Le nom comporte celui de l’avocat ou la dénomination du cabinet, éventuellement précédé ou suivi du mot « avocat ».'
+        verdict:
+            ok: comporte le nom
+            generic: générique — interdit
+            mixed: comporte le nom et un domaine du droit — à soumettre
+            unnamed: nom non reconnu
+            local: adresse de développement — non vérifiable
+        mentions: Spécialisations, qualifications, domaines d’activités dominantes
+        mentions_rule: 'RIN, art. 10.2 — l’avocat qui communique sur ses spécialisations, ses qualifications spécifiques ou ses domaines d’activités dominantes en transmet les termes sans délai au conseil de l’Ordre.'
+        pages: Pages présentant les prestations
+        pages_rule: 'RIN, art. 10.3 — toute publicité est communiquée sans délai au conseil de l’Ordre.'
+        keep: À tenir dans le temps
+        keep_links: 'Visiter régulièrement les sites vers lesquels le site renvoie, et retirer tout lien dont la cible serait contraire aux principes essentiels de la profession (RIN, art. 10.5).'
+        keep_ads: 'Aucun encart ni bannière publicitaire autre que ceux de la profession (RIN, art. 10.5).'
+        keep_change: Toute modification substantielle du site ou de ces mentions se déclare de nouveau.
+        reserve: La conformité intégrée au site ne remplace pas le contrôle du conseil de l’Ordre.

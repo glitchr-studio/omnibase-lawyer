@@ -1,0 +1,47 @@
+{# Asking for a first appointment, without an account (Base\Lawyer\Controller\Client\RequestController). #}
+{% extends office_layout() %}
+
+{% block title %}{{ 'request.title'|trans({}, 'lawyer') }}{% endblock %}
+{% block description %}{{ 'request.lead'|trans({}, 'lawyer') }}{% endblock %}
+
+{% block content %}
+<section class="of-page of-booking la-request">
+    <header class="of-page-head">
+        <h1>{{ 'request.title'|trans({}, 'lawyer') }}</h1>
+        <p class="of-lead">{{ 'request.lead'|trans({}, 'lawyer') }}</p>
+    </header>
+    {% if sent %}
+    <p class="of-success" role="status">{{ 'request.sent'|trans({}, 'lawyer') }}</p>
+    {% elseif not available %}
+    <p class="of-empty">{{ 'request.none'|trans({}, 'lawyer') }}{% if office and office.phone %} <a class="of-phone" href="tel:{{ office.phone|replace({' ': ''}) }}">{{ office.phone }}</a>{% endif %}</p>
+    {% else %}
+    <div class="of-columns">
+        <div>
+            <p class="of-warning">{{ 'request.notice'|trans({}, 'lawyer')|raw }}</p>
+            {{ form_start(form, {attr: {class: 'of-form', novalidate: 'novalidate'}}) }}
+                {{ form_errors(form) }}
+                {{ form_row(form.type) }}
+                {{ form_row(form.member) }}
+                {{ form_row(form.name) }}
+                {{ form_row(form.email) }}
+                {{ form_row(form.phone) }}
+                {{ form_row(form.message) }}
+                {{ form_row(form.website) }}
+                {{ form_row(form.privacy) }}
+                <button type="submit" class="of-button">{{ 'request.submit'|trans({}, 'lawyer') }}</button>
+            {{ form_end(form) }}
+        </div>
+        <aside>
+            <h2>{{ 'request.how'|trans({}, 'lawyer') }}</h2>
+            <ol class="la-costs">
+                <li>{{ 'request.how_1'|trans({}, 'lawyer') }}</li>
+                <li>{{ 'request.how_2'|trans({}, 'lawyer') }}</li>
+                <li>{{ 'request.how_3'|trans({}, 'lawyer') }}</li>
+            </ol>
+            {% if app.user %}<p><a href="{{ path('office_space_appointments') }}">{{ 'space.nav.appointments'|trans({}, 'lawyer') }}</a></p>{% endif %}
+            {% if office and office.phone %}<p>{{ 'request.phone_instead'|trans({}, 'lawyer') }} <a class="of-phone" href="tel:{{ office.phone|replace({' ': ''}) }}">{{ office.phone }}</a></p>{% endif %}
+        </aside>
+    </div>
+    {% endif %}
+</section>
+{% endblock %}

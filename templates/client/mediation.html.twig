@@ -1,0 +1,28 @@
+{# The consumer mediator of the lawyers' profession (Base\Lawyer\Controller\Client\LawyerController::mediation). #}
+{% extends office_layout() %}
+
+{% block title %}{{ 'mediation.title'|trans({}, 'lawyer') }}{% endblock %}
+{% block description %}{{ 'mediation.lead'|trans({}, 'lawyer') }}{% endblock %}
+
+{% block content %}
+<section class="of-page of-narrow la-mediation">
+    <header class="of-page-head">
+        <h1>{{ 'mediation.title'|trans({}, 'lawyer') }}</h1>
+        <p class="of-lead">{{ 'mediation.lead'|trans({}, 'lawyer') }}</p>
+    </header>
+    <h2>{{ 'mediation.first'|trans({}, 'lawyer') }}</h2>
+    <p>{{ 'mediation.first_text'|trans({}, 'lawyer') }}</p>
+    {% if office %}<address class="of-address">{{ office.name }}<br>{{ office.street }}<br>{{ office.postalCode }} {{ office.city }}</address>{% endif %}
+
+    <h2>{{ 'mediation.then'|trans({}, 'lawyer') }}</h2>
+    <p>{{ 'mediation.then_text'|trans({}, 'lawyer') }}</p>
+    <h3>{{ 'mediation.coordinates'|trans({}, 'lawyer') }}</h3>
+    <address class="of-address">{{ mediator.name }}{% if mediator.address %}<br>{{ mediator.address }}{% endif %}{% if mediator.email %}<br><a href="mailto:{{ mediator.email }}">{{ mediator.email }}</a>{% endif %}</address>
+    {% if mediator.url %}<p><a href="{{ mediator.url }}" rel="noopener external" target="_blank">{{ 'mediation.site'|trans({}, 'lawyer') }}</a> — {{ mediator.url|replace({'https://': ''}) }}</p>{% endif %}
+
+    {% if record.bar %}
+    <h2>{{ 'mediation.bar'|trans({}, 'lawyer') }}</h2>
+    <p>{{ 'mediation.bar_text'|trans({bar: record.bar}, 'lawyer') }}</p>
+    {% endif %}
+</section>
+{% endblock %}

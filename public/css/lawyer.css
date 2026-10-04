@@ -1,0 +1,24 @@
+/*
+ * omnibase/lawyer - the regime's own shapes, on omnibase/office's variables
+ * (--of-accent, --of-ink, --of-muted, --of-line, --of-surface).
+ */
+.la-area-list { list-style: none; margin: 0; padding: 0; counter-reset: area; border-top: 1px solid var(--of-line, #d5dbd4); }
+.la-area-list > li { counter-increment: area; display: grid; grid-template-columns: 3rem 1fr; column-gap: .5rem; padding: 1.1rem 0; border-bottom: 1px solid var(--of-line, #d5dbd4); }
+.la-area-list > li::before { content: counter(area, decimal-leading-zero); grid-row: 1 / span 3; color: var(--of-muted, #55615b); font-variant-numeric: lining-nums; padding-top: .15rem; }
+.la-area-list > li > * { grid-column: 2; margin: 0 0 .3rem; }
+.la-area-list h2 { font-size: 1.25rem; }
+.la-area-list h2 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+.la-matters, .la-official, .la-costs { margin: 0 0 1rem; padding-left: 1.2rem; line-height: 1.6; }
+.la-costs li { margin-bottom: .4rem; }
+.la-others { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--of-line, #d5dbd4); }
+.la-others ul { display: flex; flex-wrap: wrap; gap: .3rem 1.4rem; list-style: none; margin: 0; padding: 0; }
+.la-space-nav ul { display: flex; flex-wrap: wrap; gap: .3rem 1.2rem; list-style: none; margin: 0 0 1rem; padding: 0 0 .6rem; border-bottom: 1px solid var(--of-line, #d5dbd4); font-size: .95rem; }
+.la-space-nav a { color: inherit; text-decoration: none; padding: .35rem 0; display: inline-block; }
+.la-space-nav a[aria-current="page"] { font-weight: 700; box-shadow: 0 2px 0 var(--of-accent, currentColor); }
+.la-facts { margin: 0 0 1.5rem; }
+.la-facts > div { display: grid; gap: 0 1rem; padding: .5rem 0; border-top: 1px solid var(--of-line, #d5dbd4); }
+.la-facts dt { color: var(--of-muted, #55615b); font-size: .9rem; }
+.la-facts dd { margin: 0; }
+@media (min-width: 40rem) { .la-facts > div { grid-template-columns: 14rem 1fr; } }
+.la-priced { list-style: none; margin: 0 0 1rem; padding: 0; max-width: 34rem; }
+.la-priced li { display: flex; justify-content: space-between; gap: 1rem; padding: .45rem 0; border-bottom: 1px solid var(--of-line, #d5dbd4); }

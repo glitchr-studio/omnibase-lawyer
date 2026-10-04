@@ -1,0 +1,39 @@
+{# One field of practice (Base\Lawyer\Controller\Client\LawyerController::area). #}
+{% extends office_layout() %}
+
+{% block title %}{{ area.name }}{% endblock %}
+{% block description %}{{ area.summary }}{% endblock %}
+
+{% block content %}
+<article class="of-page la-area">
+    <p class="of-back"><a href="{{ path('lawyer_areas') }}">← {{ 'areas.title'|trans({}, 'lawyer') }}</a></p>
+    <header class="of-page-head">
+        <h1>{{ area.name }}</h1>
+        {% if area.summary %}<p class="of-lead">{{ area.summary }}</p>{% endif %}
+    </header>
+    <div class="of-columns">
+        <div class="of-prose">
+            {% for paragraph in area.paragraphs %}<p>{{ paragraph|nl2br }}</p>{% endfor %}
+            <p class="of-actions"><a class="of-button" href="{{ path('lawyer_request') }}">{{ 'areas.ask'|trans({}, 'lawyer') }}</a></p>
+        </div>
+        <aside>
+            {% if area.matters %}
+            <h2>{{ 'areas.matters'|trans({}, 'lawyer') }}</h2>
+            <ul class="la-matters">{% for deed in area.matters %}<li>{{ deed }}</li>{% endfor %}</ul>
+            {% endif %}
+            {% if area.members|length %}
+            <h2>{{ 'areas.team'|trans({}, 'lawyer') }}</h2>
+            <ul class="of-list">{% for member in area.members %}{% if member.visible and member.active %}<li><a href="{{ path('office_member', {slug: member.slug}) }}">{{ member.displayName }}</a>{% if member.title %} <span class="of-meta">— {{ member.title }}</span>{% endif %}</li>{% endif %}{% endfor %}</ul>
+            {% endif %}
+            <h2>{{ 'areas.cost'|trans({}, 'lawyer') }}</h2>
+            <p>{{ 'areas.cost_text'|trans({}, 'lawyer') }} <a href="{{ path('lawyer_fees') }}">{{ 'areas.cost_link'|trans({}, 'lawyer') }}</a></p>
+        </aside>
+    </div>
+    {% if areas|length > 1 %}
+    <nav class="la-others" aria-label="{{ 'areas.others'|trans({}, 'lawyer') }}">
+        <h2>{{ 'areas.others'|trans({}, 'lawyer') }}</h2>
+        <ul>{% for other in areas %}{% if other.id != area.id %}<li><a href="{{ path('lawyer_area', {slug: other.slug}) }}">{{ other.name }}</a></li>{% endif %}{% endfor %}</ul>
+    </nav>
+    {% endif %}
+</article>
+{% endblock %}
