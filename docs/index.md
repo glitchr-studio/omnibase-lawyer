@@ -168,6 +168,32 @@ glitchr/omnitrade - is the application's.
 The CRUD of the lawyers and of the fields of practice, the settings section, the memo for the
 Ordre, and eight checks in omnibase/office's `office_compliance` widget.
 
+## Demonstration accounts
+
+In glitchr/omnibase's `demo` environment (its `docs/20-architecture/demo.md`) the sign-in page offers
+one button for each role of a firm. `Base\Lawyer\Demo\LawyerDemoAccounts` declares them:
+
+| Identifier | Role | |
+|---|---|---|
+| `avocate` | group "Avocats" (`ROLE_LAWYER`) | the agenda, the requests to settle, the clients' documents: reads them, sends some |
+| `avocat` | group "Avocats" (`ROLE_LAWYER`) | the associate lawyer: an agenda of his own, the same documents |
+| `secretariat` | group "Secrétariat" (`ROLE_SECRETARY`) | the agenda, the requests, the site's messages; sees that a document exists, reads nothing confidential |
+| `cabinet` | `ROLE_ADMIN` | the firm's administration: team, fields of practice, settings, the memo for the Ordre, compliance |
+| `client` | group "Clients" | the client's space: an appointment requested, a draft in the vault, an exhibit deposited |
+
+The password is the identifier. The fixtures take the accounts from omnibase's factory and attach
+what makes them worth signing in as - a member of the team and an agenda, a request and documents:
+
+```php
+public function __construct(private readonly \Base\Demo\DemoAccountFactory $accounts) {}
+
+$avocate = $this->accounts->account('avocate', $manager);   // created with its group, or the database's
+```
+
+A firm without one of these roles leaves it out (`base.demo.exclude: [avocat]` for a lawyer
+practising alone); a site that renames one declares the same identifier in its own provider. The
+labels are `demo.<identifier>.label` and `.description` in the `lawyer` domain.
+
 ## More
 
 [Rules and sources](rules.md)

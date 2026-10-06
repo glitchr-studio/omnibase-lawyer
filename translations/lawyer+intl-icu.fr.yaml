@@ -173,3 +173,21 @@ admin:
         keep_ads: 'Aucun encart ni bannière publicitaire autre que ceux de la profession (RIN, art. 10.5).'
         keep_change: Toute modification substantielle du site ou de ces mentions se déclare de nouveau.
         reserve: La conformité intégrée au site ne remplace pas le contrôle du conseil de l’Ordre.
+
+# The demonstration accounts (Base\Lawyer\Demo\LawyerDemoAccounts): the button, and what the role sees.
+demo:
+    avocate:
+        label: Avocate
+        description: "L'agenda du cabinet, les demandes de rendez-vous à fixer, les documents des clients : elle les lit et leur en adresse."
+    avocat:
+        label: Collaborateur
+        description: "L'avocat collaborateur : son agenda, les demandes, les documents des clients, qu'il lit aussi."
+    secretariat:
+        label: Secrétariat
+        description: "L'agenda, les demandes de rendez-vous et les messages du site ; il voit qu'un document existe, sans lire ce qui est confidentiel."
+    cabinet:
+        label: Cabinet
+        description: "L'administration du cabinet : l'équipe, les domaines, les réglages, le mémo pour l'Ordre, la conformité."
+    client:
+        label: Client
+        description: "Son espace : un rendez-vous demandé, un projet de conclusions à lire dans le coffre, une pièce déposée."

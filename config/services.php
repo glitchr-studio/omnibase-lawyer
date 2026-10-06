@@ -26,8 +26,14 @@ return function (ContainerConfigurator $configurator) {
             $src.'/Form/Model/',
             $src.'/Controller/Admin/',
             $src.'/Admin/',
+            $src.'/Demo/',
             $src.'/LawyerBundle.php',
         ]);
+
+    // The demonstration accounts of a firm, when the installed glitchr/omnibase has the demo environment.
+    if (interface_exists('Base\\Demo\\DemoAccountProviderInterface')) {
+        $services->load('Base\\Lawyer\\Demo\\', $src.'/Demo/');
+    }
 
     $services->load('Base\\Lawyer\\Controller\\Client\\', $src.'/Controller/Client/')
         ->tag('controller.service_arguments');
