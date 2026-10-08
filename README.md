@@ -32,4 +32,4 @@ French law firm, within article 10 of the Règlement intérieur national (RIN).
 composer require omnibase/lawyer        # brings omnibase/office
 ```
 
-Documentation: [docs/](docs/index.md). License: LGPL-3.0-or-later.
+Documentation: [docs/](docs/index.md). License: MIT since 2026-10-09; earlier versions remain published under LGPL-3.0-or-later.

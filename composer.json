@@ -4,7 +4,7 @@
     "description": "The lawyers' regime on omnibase/office: a law firm's site within article 10 of the RIN - the domain name checked (10.5), specialisations from the certified list only and three dominant fields at most (10.2), wording checked against comparison, the fees and the mandatory fee agreement (11.1, 11.2), the consumer mediator of the profession, the memo of what is declared to the Ordre; fields of practice, the client's space on the encrypted vault, professional secrecy in who reads a document; the hook for paying fees online.",
     "keywords": ["symfony", "omnibase", "avocat", "lawyer", "cabinet d'avocat", "RIN", "compliance", "déontologie"],
     "homepage": "https://github.com/glitchr-studio/omnibase-lawyer",
-    "license": "LGPL-3.0-or-later",
+    "license": "MIT",
     "authors": [
         {
             "name": "Marco Meyer",
