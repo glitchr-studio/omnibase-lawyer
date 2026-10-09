@@ -5,6 +5,7 @@
     "keywords": ["symfony", "omnibase", "avocat", "lawyer", "cabinet d'avocat", "RIN", "compliance", "déontologie"],
     "homepage": "https://github.com/glitchr-studio/omnibase-lawyer",
     "license": "MIT",
+    "abandoned": "omnibase/legal",
     "authors": [
         {
             "name": "Marco Meyer",
